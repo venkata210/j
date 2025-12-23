@@ -1,5 +1,6 @@
 import { ArrowRight, BarChart3, CheckCircle2, Globe2, Layers, Zap } from "lucide-react";
 import Link from "next/link";
+import Scene3D from "./components/Scene3D";
 
 export default function Home() {
   return (
@@ -33,9 +34,11 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="py-20 md:py-32 overflow-hidden relative">
-          <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)]"></div>
+          <div className="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)]"></div>
           
-          <div className="container mx-auto px-4 md:px-6 text-center">
+          <Scene3D />
+
+          <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
             <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 mb-8">
               New: Analytics Dashboard 2.0
             </div>
